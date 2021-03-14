@@ -99,6 +99,7 @@ public class smtpServer {
                 System.out.println("\rS: 221 gov.uk closing connection");
                 printStream.println("\rS: 221 gov.uk closing connection");
                 } else
+                    System.out.println("\rC: " + data);
                     client.sendUrgentData(1);
                 }
                 System.setOut(printStream);
