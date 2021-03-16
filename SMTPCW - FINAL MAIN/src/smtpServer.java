@@ -39,6 +39,8 @@ public class smtpServer {
         // listen to incoming client's requests via the ServerSocket
         String data = null;
         Socket client = this.server.accept(); // Client's connection to the server is accepted
+        String clientAddress = client.getInetAddress().getHostAddress(); // Obtains client address as string
+        System.out.println("\r\nNew client successfully connected at " + clientAddress); // Prints message when client successfully connects to the server.
 
         /* Variable set in order to save the transcript between the server and client into a text file
         called "out.txt". The contents printed in the terminal are saved to this file.
