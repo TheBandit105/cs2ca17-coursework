@@ -70,7 +70,7 @@ public class smtpServer {
                     System.out.println("\rC: " + data);
                     System.out.println("\rS: 250 " + data.toLowerCase() + ", pleased to meet you.");
                     printStream.println("\rS: 250 " + data.toLowerCase() + ", pleased to meet you.");
-                    out.println("S: " + data.toLowerCase() + ", pleased to meet you.");
+                    out.println("S: 250 " + data.toLowerCase() + ", pleased to meet you.");
                     out.flush();
                 } else if (data.startsWith("MAIL FROM: ")) {
                     System.out.println("\rC: " + data);
